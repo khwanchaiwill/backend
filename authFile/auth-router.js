@@ -4,12 +4,9 @@ const jwt = require('jsonwebtoken');
 const Users = require('../router/users-model.js');
 const secrets = require('../secretToken.js');
 
-
-
 router.get('/', (req, res ) => {
-    res.status(200).json({message: "You are here at the auth route"})
- })
- 
+   res.status(200).json({message: "You are here at the auth route"})
+})
 
 router.post("/register", (req, res) => {
 
@@ -26,7 +23,7 @@ if(credentials){
         console.log(users)
       res.status(200).json({data: "Register succesful"});
     })
-    .catch(err => res.send({error: err.message}));
+    .catch(err => res.send({error: err.message, message: " you can not get it to work"}));
     
 }else{
     res.status(400).json({message: " Please provide a name, username, and password"})
