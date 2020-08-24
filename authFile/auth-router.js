@@ -5,10 +5,6 @@ const jwt = require('jsonwebtoken');
 const Users = require('../router/users-model.js');
 const secrets = require('../secretToken.js');
 
-router.get('/', (req, res ) => {
-   res.status(200).json({message: "You are here at the auth route"})
-})
-
 router.post("/register", (req, res) => {
 
     const credentials  = req.body;
