@@ -24,7 +24,7 @@ if(credentials){
         console.log(users)
       res.status(200).json({data: "Register succesful"});
     })
-    .catch(err => res.send({error: err.message, message: " you can not get it to work"}));
+    .catch(err => res.send({error: err.message, message: " You crach the api"}));
     
 }else{
     res.status(400).json({message: " Please provide a name, username, and password"})
