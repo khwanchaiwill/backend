@@ -16,9 +16,9 @@ server.use(logger)
 server.use("/api/auth", authRouter);
 server.use("/api/users", restrictedMW, userRouter);
 
-server.get("/", (req, res) => {
-    res.status(200).json({Hello: " World, The api is working"})
-})
+// server.get("/", (req, res) => {
+//     res.status(200).json({Hello: " World, The api is working"})
+// })
 function logger (req, res, next){
     console.log(`${req.method} request the ${req.url}`, Date())
     next();
